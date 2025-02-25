@@ -2,6 +2,8 @@ import { useState } from "react"
 
 import axios from "axios"
 
+import { useNavigate } from "react-router-dom";
+
 const initialFormData = {
 
     title: "",
@@ -39,6 +41,9 @@ export default function PostsForm() {
     }
 
 
+    const navigate = useNavigate();
+
+
     // Funzione del Submit
 
     function handleSubmit(e) {
@@ -51,6 +56,8 @@ export default function PostsForm() {
 
                 console.log(res.data)
 
+                navigate('/posts')
+
             })
 
             .catch(function (error) {
@@ -59,17 +66,17 @@ export default function PostsForm() {
 
             })
 
-        setFruitPosts((currentFruitsPosts) => [...currentFruitsPosts,
+        // setFormData((currentFruitsPosts) => [...currentFruitsPosts,
 
-        {
+        // {
 
-            id:
+        //     id:
 
-                currentFruitsPosts.length === 0 ? 1 : currentFruitsPosts[currentFruitsPosts.length - 1].id + 1,
+        //         currentFruitsPosts.length === 0 ? 1 : currentFruitsPosts[currentFruitsPosts.length - 1].id + 1,
 
-            ...formData
+        //     ...formData
 
-        }])
+        // }])
 
         setFormData(initialFormData)
 

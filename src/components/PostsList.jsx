@@ -96,7 +96,7 @@ export default function PostsList() {
                                     {fruit.tags ? fruit.tags.join(", ") : "No tags available 🔥"}
                                 </span>
 
-                                <Link to={`/posts/${fruit.id}`}><button>Click</button></Link>
+                                <Link to={`/posts/${fruit.id}`}><button>Details</button></Link>
 
                             </div>
 
