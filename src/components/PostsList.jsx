@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import axios from 'axios';
 
 
@@ -46,7 +48,7 @@ export default function PostsList() {
 
         });
 
-        axios.delete(`http://localhost:3000/route/${id}`)
+        axios.delete(`http://localhost:3000/posts/${id}`)
 
             .then(res =>
 
@@ -93,6 +95,8 @@ export default function PostsList() {
                                 <span>
                                     {fruit.tags ? fruit.tags.join(", ") : "No tags available 🔥"}
                                 </span>
+
+                                <Link to={`/posts/${fruit.id}`}><button>Click</button></Link>
 
                             </div>
 

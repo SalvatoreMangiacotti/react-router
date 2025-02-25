@@ -49,7 +49,7 @@ function App() {
 
             <Route path='/posts'>
 
-              <Route path='' element={<PostsPage />} />
+              <Route index element={<PostsPage />} />
 
               <Route path='create' element={<PostsCreatePage />} />
 
