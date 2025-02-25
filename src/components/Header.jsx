@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 export default function Header() {
 
@@ -19,7 +19,11 @@ export default function Header() {
                     </li>
 
                     <li>
-                        <NavLink to="/postslist">Postslist</NavLink>
+                        <NavLink to="/posts">Posts</NavLink>
+                    </li>
+
+                    <li>
+                        <Link to="/posts/create">Add a new post</Link>
                     </li>
 
                 </ul>

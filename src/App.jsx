@@ -16,9 +16,14 @@ import HomePage from './pages/HomePage'
 import AboutUs from './pages/AboutUs'
 
 
-// PostsList
+// Pages
 
-import PostsList from './pages/PostsList'
+import PostsPage from './pages/PostsPage'
+
+import PostsCreatePage from './pages/PostsCreatePage'
+
+import PostsDetailsPage from './pages/PostsDetailsPage'
+
 
 
 // Css
@@ -42,7 +47,15 @@ function App() {
 
             <Route path='/about' element={<AboutUs />} />
 
-            <Route path='/postslist' element={<PostsList />} />
+            <Route path='/posts'>
+
+              <Route path='' element={<PostsPage />} />
+
+              <Route path='create' element={<PostsCreatePage />} />
+
+              <Route path=':id' element={<PostsDetailsPage />} />
+
+            </Route>
 
           </Route>
 
