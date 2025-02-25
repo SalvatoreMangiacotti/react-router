@@ -5,20 +5,15 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
 
 
-
-
 export default function PostsDetails() {
 
     const { id } = useParams();
 
-
     const [post, setPost] = useState({})
-    console.log("Post ID:", id)
-
 
     function fetchPost() {
 
-        axios.get(`http://localhost:3000/posts/${id}`)
+        axios.get(`http://localhost:3000/route/${id}`)
 
             .then(response => setPost(response.data))
 
