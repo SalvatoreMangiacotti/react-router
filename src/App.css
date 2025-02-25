@@ -1,0 +1,63 @@
+/* Resets */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+ul {
+
+    list-style: none;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+/* Header */
+
+.active {
+
+    background-color: lightblue;
+
+}
+
+
+header nav {
+
+    padding: 1rem;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+header nav ul {
+
+    display: flex;
+
+    gap: 1rem;
+
+}
+
+
+header nav ul a {
+
+    padding: 10px;
+
+}
